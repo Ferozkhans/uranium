@@ -18,14 +18,15 @@ router.get('/movies', function(req, res) {
  })
  router.get('/moviess/:indexNumbers',function(req, res) {
       let arr = ['rrr','pushpa','avengers','skathi','spider']
-      for(let i=0;i<=arr.length;i++){
-          if (i===arr.length){
-         res.send(arr[req.params.indexNumbers])
-          }else {
-          res.send("index error")
-          }
-      }
+     for (let i=0;i<arr.length;i++){
+       // if(arr[i]<=3){
+        //}else{
+        //}
+        res.send(arr[req.params.indexNumbers] || "error")
+     }
+        
  })
+
  router.get('/films' , function(req,res){
      let hello = [ {
         id: 1,
